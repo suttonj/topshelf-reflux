@@ -36,9 +36,9 @@ let Basket = React.createClass({
 
   render() {
     var statusClassName = this.state.qty === 0 ? 'appBasket--is-empty ' : '';
-    var list = this.getBasketData().map((item)=> {
+    var list = this.getBasketData().map((item,n)=> {
       return (
-        <li key="item.id" className="pure-g">
+        <li key={n} className="pure-g">
           <div className="pure-u-2-5">{item.name} | £{item.price}</div>
           <div className="pure-u-1-5 appBasket-qty">x {item.qty}</div>
           <div className="pure-u-1-5">

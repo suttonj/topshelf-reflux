@@ -1,4 +1,4 @@
- 
+
 'use strict';
 
 //let React = require('react');
@@ -34,7 +34,7 @@ let ProductStore = Reflux.createStore({
   loadPage(productType,cached) {
     if(cached !== true || this.data.products[productType].length === 0) {
       //var productType = arguments[0];
-      request.get('/data/' + productType +'.json')
+      request.get('data/' + productType +'.json')
         .end((err, res) => {
           this.data.products[productType] = JSON.parse(res.text)[0].products;
           this.trigger(this.data);

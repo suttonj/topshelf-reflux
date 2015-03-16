@@ -1,4 +1,4 @@
- 
+
 'use strict';
 
 let React = require('react');
@@ -24,7 +24,6 @@ let pages = {
 
 let Page = React.createClass({
       render: function() {
-        //console.log(this.props.params.id);
         return (
           <div className='container'>
             <Header />

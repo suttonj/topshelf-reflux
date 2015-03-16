@@ -1,4 +1,4 @@
- 
+
 'use strict';
 
 let Reflux = require('reflux');
@@ -9,8 +9,6 @@ let AppActions = Reflux.createActions(
   'loadPage',
   'addItem',
   'removeItem',
-  'decreaseItem',
-  'increaseItem',
   'pageChange'
   ]
 );

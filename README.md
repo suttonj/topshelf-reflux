@@ -1,9 +1,11 @@
 # react-reflux-super-fantastic-shop-demo
 
-** A super fantastic demo shop making use of the incredible powers provided by:**
+A super fantastic demo shop making use of the incredible powers provided by:
 - [react](http://facebook.github.io/react/)
 - [reflux](https://www.npmjs.com/package/reflux)
 - [react router](https://github.com/rackt/react-router)
+
+**<a href="https://stylecoder.github.io/react-reflux-super-fantastic-shop-demo" target="_blank">demo page</a>**
 
 **Built with:**
   - npm and gulp  development/watch/livereload and production tasks

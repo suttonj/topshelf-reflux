@@ -1,0 +1,70 @@
+.appBasket {
+  z-index:10;
+  opacity:1;
+  pointer-events:auto;
+  -webkit-transition: opacity 0.25s ease-in;
+  transition: opacity 0.25s ease-in;
+  position:fixed;
+  top:0;
+  right:0;
+  border: 1px solid #F1F1F1;
+  border-right: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  box-shadow: 1px 1px 2px #DDD;
+  padding: 25px 20px 10px;
+  background-color: #FFF;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 0 0 5px 5px;
+}
+
+.appBasket--is-empty {
+  opacity:0;
+  pointer-events:none;
+}
+
+.appBasket > span {
+  display:inline-block;
+  margin-right: 18px;
+}
+
+.appBasket-nrItems {
+  border: 2px solid #FB4065;
+  box-shadow: 0 0 5px #FB4065;
+  border-radius: 50%;
+  padding: 10px 14px;
+  color:#FFF;
+  background-color: #FB4065;
+}
+
+.appBasket-qty {
+  display:inline-block;
+  color: #FB4065;
+  margin:0 10px;
+  letter-spacing: 1px;
+}
+
+.appBasket-label {}
+
+.appBasket-total {
+  background-color: #2CBB9C;
+  padding: 5px;
+  color:#FFF;
+  border-radius: 2px;
+}
+
+.basketList {
+  padding-top: 10px;
+  border-bottom:1px dotted #DDD;
+}
+.basketList >li {
+  padding: 10px 0;
+  border-top:1px dotted #DDD;
+  font-size: 12px;
+  font-size: 0.8571rem;
+}
+
+.basketList .appBtn {
+  padding: 3px 5px;
+  border-radius: 5px;
+  margin-top:-5px;
+}

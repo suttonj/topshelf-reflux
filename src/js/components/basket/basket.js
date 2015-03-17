@@ -53,7 +53,7 @@ let Basket = React.createClass({
         </li>);
     });
     return (
-      <div className={"appBasket pure-u-1 pure-u-md-2-5 " + statusClassName}>
+      <div className={"appBasket pure-u-3-5 pure-u-md-3-5 pure-u-lg-2-5 " + statusClassName}>
         <div className="pure-g">
           <div className="appBasket-label pure-u-1-2">Basket</div>
           <div className="pure-u-1-2">

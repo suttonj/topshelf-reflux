@@ -1,4 +1,4 @@
- 
+
 'use strict';
 
 let React = require('react');
@@ -16,7 +16,7 @@ let AddToBasket = React.createClass({
       actions.addItem(this.props.item);
     };
     return (
-      <button onClick={clickHandler} className="addBasket appBtn">
+      <button onClick={clickHandler} className="addBasket pure-button">
         {this.props.text}
      </button>
     );

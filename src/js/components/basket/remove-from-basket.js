@@ -1,4 +1,4 @@
- 
+
 'use strict';
 
 let React = require('react');
@@ -13,7 +13,7 @@ let RemoveFromBasket = React.createClass({
   render: function() {
     var clickHandler = actions.removeItem.bind(this, this.props.item);
     return (
-      <button onClick={clickHandler} className="appBtn removeBasket">-</button>
+      <button onClick={clickHandler} className="pure-button removeBasket">-</button>
     );
   }
 });

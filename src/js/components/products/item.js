@@ -1,4 +1,4 @@
- 
+
 'use strict';
 
 require('./item.css');
@@ -47,12 +47,12 @@ let Item = React.createClass({
   render: function() {
     var statusClassName = this.state.inBasket ? 'is-inBasket ' : '';
     return (
-      <li className='pure-u-1 pure-u-md-1-4' >
+      <li className='pure-u-1 pure-u-md-1-3 pure-u-lg-1-4' >
         <div className={"appItem appItem--"+ statusClassName}>
           <h4 className="appItem-title truncate">{this.props.item.name}</h4>
 
           <img className={'img-responsive appItem-img'} src={this.props.item.image} alt="" />
-          <div className="appItem-price">£ {this.props.item.price}</div>
+          <div className="appItem-price">£ {this.props.item.price}.00</div>
           <div className="appItem-qty">x { this.state.inBasketQty }</div>
           <div className="basketControls">
             {this.getBasketControls()}

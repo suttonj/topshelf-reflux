@@ -14,7 +14,12 @@ var Header =
             </p>
             <Nav />
           </header>
-          <Basket />
+          <div className="fixed-container">
+            <div className="container">
+              <Basket className="pure-g" />
+            </div>
+          </div>
+
         </div>
       );
     }

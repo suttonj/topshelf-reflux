@@ -41,6 +41,8 @@ $btn-text-color-hover: #FFF;
 // topnav
 // --------------------------------------------------
 .#{$namespace}Nav {
+  z-index:11;
+  position:relative;
   border-bottom: 1px solid #F1F1F1;
   padding: 10px;
   margin-bottom:10px;

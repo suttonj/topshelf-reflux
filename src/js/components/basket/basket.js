@@ -39,19 +39,28 @@ let Basket = React.createClass({
     var list = this.getBasketData().map((item,n)=> {
       return (
         <li key={n} className="pure-g">
-          <div className="pure-u-2-5">{item.name} | £{item.price}</div>
-          <div className="pure-u-1-5 appBasket-qty">x {item.qty}</div>
-          <div className="pure-u-1-5">
+          <div className="pure-u-1-2">
+            <span className="appBasket-itemDetails">
+              {item.name} : £{item.price}.00
+            </span>
+            <span className="appBasket-qty">x {item.qty}</span>
+            </div>
+
+          <div className="pure-u-1-2 appBasket-controls">
             <AddToBasket text="+" item={item} />
             <RemoveFromBasket item={item} />
           </div>
         </li>);
     });
     return (
-      <div className={"appBasket pure-u-1 pure-u-md-1-3 " + statusClassName}>
-        <span className="appBasket-label">Basket</span>
-        <span className="appBasket-nrItems">{this.state.qty}</span>
-        <span className="appBasket-total">£{this.state.total}</span>
+      <div className={"appBasket pure-u-1 pure-u-md-2-5 " + statusClassName}>
+        <div className="pure-g">
+          <div className="appBasket-label pure-u-1-2">Basket</div>
+          <div className="pure-u-1-2">
+            <span className="appBasket-nrItems"> x {this.state.qty}</span>
+            <span className="appBasket-total">£{this.state.total}.00</span>
+          </div>
+        </div>
         <ul className="basketList list-reset">{list}</ul>
       </div>
     );

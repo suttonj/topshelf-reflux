@@ -46,6 +46,7 @@ $btn-text-color-hover: #FFF;
   border-bottom: 1px solid #F1F1F1;
   padding: 10px;
   margin-bottom:10px;
+  width:33%;
   &-list {
     margin: 0;
     padding: 0;
@@ -53,7 +54,7 @@ $btn-text-color-hover: #FFF;
     &Item {
       display: inline-block;
       list-style: none !important;
-      margin: 0 20px 0 0;
+      margin: 0 20px 5px 0;
       padding: 0;
     }
   }

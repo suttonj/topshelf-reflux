@@ -5,6 +5,7 @@ let React = require('react');
 let Router = require('react-router');
 
 let { Route, DefaultRoute, RouteHandler, Link } = Router;
+let ReactCSSTransitionGroup = require('react/lib/ReactCSSTransitionGroup');
 
 let Page = require('./components/page/page');
 
@@ -12,7 +13,9 @@ let App = React.createClass({
   render: function () {
     return (
       <div>
-        <RouteHandler {...this.props} />
+        <ReactCSSTransitionGroup component="div" transitionName="transition">
+          <RouteHandler key={name} {...this.props} />
+        </ReactCSSTransitionGroup>
       </div>
     );
   }

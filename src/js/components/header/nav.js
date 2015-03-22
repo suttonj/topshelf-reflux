@@ -1,4 +1,4 @@
- 
+
 'use strict';
 
 let React = require('react');
@@ -12,12 +12,8 @@ var Nav = React.createClass({
     return (
       <nav className='appNav'>
           <ul className='appNav-list'>
-            <li className='appNav-listItem'>
-              <Link className='appBtn' to='/shop/food' >Food</Link>
-              </li>
-            <li className='appNav-listItem'>
-              <Link className='appBtn' to='/shop/fashion' >Fashion</Link>
-              </li>
+            <li className='appNav-listItem'><Link className='appBtn' to='/shop/food' >Food</Link></li>
+            <li className='appNav-listItem'><Link className='appBtn' to='/shop/fashion' >Fashion</Link></li>
           </ul>
       </nav>
     );

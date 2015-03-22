@@ -1,8 +1,9 @@
- 
+
 'use strict';
 
 let React = require('react');
 let Reflux = require('reflux');
+let ReactCSSTransitionGroup = require('react/lib/ReactCSSTransitionGroup');
 
 let store = require('../../stores/product-store');
 let actions = require('../../actions/app-actions');
@@ -33,14 +34,17 @@ let Items = React.createClass({
 
   render: function() {
       //console.log( this.state.productType);
-      var items = this.state.products[this.props.type].map(item => {
+
+      var items = this.state.products[this.props.type].map((item,i) => {
           item.type = this.state.productType;
-          return <Item key={item.id} item={item} />;
+          return <Item key={item.id} item={item} index={i} />;
         });
         return (
-          <ul className="pure-g appItems list-reset">
-           {items}
-         </ul>
+          <div>
+            <ReactCSSTransitionGroup component="ul" className="pure-g appItems list-reset"  transitionName="example">
+            {items}
+          </ReactCSSTransitionGroup>
+          </div>
        );
   }
 });

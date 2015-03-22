@@ -44,10 +44,17 @@ let Item = React.createClass({
     return controls;
   },
 
+  componentWillEnter() {
+    console.log('componentWillEnter');
+  },
+
   render: function() {
     var statusClassName = this.state.inBasket ? 'is-inBasket ' : '';
+    var itemStyle = {
+      transitionDelay: this.props.index * 0.25 + 's'
+    };
     return (
-      <li className='pure-u-1 pure-u-md-1-3 pure-u-lg-1-4' >
+      <li style={itemStyle} className='pure-u-1 pure-u-md-1-3 pure-u-lg-1-4' >
         <div className={"appItem appItem--"+ statusClassName}>
           <h4 className="appItem-title truncate">{this.props.item.name}</h4>
 

@@ -4,7 +4,7 @@
 let React = require('react');
 let Reflux = require('reflux');
 
-let Header = require('../header/header');
+
 let Items = require('../products/items');
 
 
@@ -23,14 +23,17 @@ let pages = {
 };
 
 let Page = React.createClass({
+
       render: function() {
+        let pageName = this.props.params.pathname.slice(1);
+        console.log(pageName);
         return (
           <div className='container'>
-            <Header />
-            <div className={pages['page'+this.props.params.id].pageClasses}>
-              <h1>{pages['page'+this.props.params.id].heading}</h1>
-              <Items type={this.props.params.id} />
-            </div>
+
+              <div className={pages['page'+pageName].pageClasses}>
+                <h1>{pages['page'+pageName].heading}</h1>
+                <Items type={pageName} />
+              </div>
           </div>
 
           );

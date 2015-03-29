@@ -7,6 +7,7 @@ var Header =
   React.createClass({
     render:function(){
       return (
+        <div className='container'>
         <div className="pure-g">
           <header className="appHeader pure-u-1">
             <h1>Super fantastic shop</h1>
@@ -19,7 +20,7 @@ var Header =
               <Basket className="pure-g" />
             </div>
           </div>
-
+          </div>
         </div>
       );
     }

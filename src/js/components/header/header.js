@@ -1,7 +1,6 @@
 
 let React = require('react');
 let Basket = require('../basket/basket.js');
-let Nav = require('./nav.js');
 
 var Header =
   React.createClass({
@@ -13,7 +12,8 @@ var Header =
             <h1>Super fantastic shop</h1>
             <p>A demo shop making use of the incredible powers provided by <a href="http://facebook.github.io/react/" target="_new">react</a>, <a href="https://github.com/rackt/react-router" target="_new">react-router</a> and <a href="https://www.npmjs.com/package/reflux" target="_new">reflux</a>. <a href="https://github.com/stylecoder/react-reflux-super-fantastic-shop-demo" target="_new">View source code here.</a>
             </p>
-            <Nav />
+
+              { this.props.children }
           </header>
           <div className="fixed-container">
             <div className="container">

@@ -20,7 +20,14 @@ let App = React.createClass({
 
     return (
       <div>
-        <Header />
+      <Header>
+        <nav className='appNav'>
+            <ul className='appNav-list'>
+              <li className='appNav-listItem'><Link className='appBtn' to='food' >Food</Link></li>
+              <li className='appNav-listItem'><Link className='appBtn' to='fashion' >Fashion</Link></li>
+            </ul>
+        </nav>
+      </Header>
         <ReactCSSTransitionGroup component="div" transitionName="transition">
           <RouteHandler key={name} {...this.props} />
         </ReactCSSTransitionGroup>
@@ -47,8 +54,6 @@ let routes = (
 );
 
 Router.run(routes, function (Handler, state) {
-  //let params = state.params;
-
   React.render(<Handler params={state} />, document.getElementById('app'));
 });
 

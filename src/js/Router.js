@@ -5,7 +5,7 @@ let React = require('react');
 let ReactCSSTransitionGroup = require('react/lib/ReactCSSTransitionGroup');
 let Router = require('react-router');
 let { Route, DefaultRoute, RouteHandler, Link } = Router;
-require('./App.css');
+require('./Router.css');
 
 let Header = require('./components/header/header');
 
@@ -28,7 +28,7 @@ let App = React.createClass({
             </ul>
         </nav>
       </Header>
-        <ReactCSSTransitionGroup component="div" transitionName="transition">
+        <ReactCSSTransitionGroup component="div" transitionName="routerTransition">
           <RouteHandler key={name} {...this.props} />
         </ReactCSSTransitionGroup>
       </div>

@@ -1,17 +1,17 @@
 
 
-.transition-enter {
+.routerTransition-enter {
   opacity:0;
   transition: opacity 500ms ease-out;
 }
-.transition-enter.transition-enter-active {
+.routerTransition-enter.routerTransition-enter-active {
   opacity:1;
 }
-.transition-leave {
+.routerTransition-leave {
   opacity:0.001;
   transition: opacity 500ms ease-in;
 }
-.transition-leave.transition-leave-active {
+.routerTransition-leave.routerTransition-leave-active {
   opacity:0.001;
 }
 .page {

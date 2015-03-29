@@ -3,7 +3,6 @@
 
 let React = require('react');
 let Reflux = require('reflux');
-let ReactCSSTransitionGroup = require('react/lib/ReactCSSTransitionGroup');
 
 let store = require('../../stores/product-store');
 let actions = require('../../actions/app-actions');
@@ -41,9 +40,9 @@ let Items = React.createClass({
         });
         return (
           <div>
-            <ReactCSSTransitionGroup component="ul" className="pure-g appItems list-reset"  transitionName="example">
+            <ul component="ul" className="pure-g appItems list-reset">
             {items}
-          </ReactCSSTransitionGroup>
+          </ul>
           </div>
        );
   }

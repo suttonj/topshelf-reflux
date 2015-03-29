@@ -1,15 +1,25 @@
 
+
 .transition-enter {
   opacity:0;
-  transition: opacity 0.75s ease-out 0.25s;
+  transition: opacity 500ms ease-out;
 }
 .transition-enter.transition-enter-active {
   opacity:1;
 }
 .transition-leave {
   opacity:0.001;
-  transition: opacity 0.5s ease-in;
+  transition: opacity 500ms ease-in;
 }
 .transition-leave.transition-leave-active {
   opacity:0.001;
+}
+.page {
+  background-color:#fff;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 70%;
+  width: 100%;
 }

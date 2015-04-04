@@ -47,7 +47,6 @@ $ npm build
 
 ### TODOS:
  - add product details page
- - tidy up router logic (seperate into router.js file)
  - add router page transitions
  - tidy up basket styles
  - add subtle UI animations

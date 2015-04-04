@@ -23,7 +23,10 @@ let Item = React.createClass({
     return basketStore.getBasketQty(this.props.item);
   },
 
-  onStatusChange: function() {
+  onStatusChange: function(productType) {
+    if (typeof productType === "string") {
+      //console.log('current productType', productType);
+    }
     this.setState({inBasket : this.isInBasket()});
     this.setState({inBasketQty : this.getBasketQty()});
   },
@@ -45,7 +48,7 @@ let Item = React.createClass({
   },
 
   componentWillEnter() {
-    console.log('componentWillEnter');
+    //console.log('componentWillEnter');
   },
 
   render: function() {
@@ -57,7 +60,7 @@ let Item = React.createClass({
 
           <img className={'img-responsive appItem-img'} src={this.props.item.image} alt="" />
           <div className="appItem-price">£ {this.props.item.price}.00</div>
-          <div className="appItem-qty">x { this.state.inBasketQty }</div>
+          <div className="appItem-qty">x { this.props.item.qty }</div>
           <div className="basketControls">
             {this.getBasketControls()}
           </div>

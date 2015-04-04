@@ -1,7 +1,5 @@
- 
 'use strict';
 
-//let React = require('react');
 let Reflux = require('reflux');
 let actions = require('../actions/app-actions');
 let _ = require('lodash');

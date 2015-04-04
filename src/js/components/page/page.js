@@ -1,4 +1,3 @@
-
 'use strict';
 
 let React = require('react');
@@ -6,7 +5,6 @@ let Reflux = require('reflux');
 
 
 let Items = require('../products/items');
-
 
 require('./page.css');
 
@@ -23,19 +21,16 @@ let pages = {
 };
 
 let Page = React.createClass({
-
       render: function() {
         let pageName = this.props.params.pathname.slice(1);
-        console.log(pageName);
+        //console.log(pageName);
         return (
           <div className='container'>
-
               <div className={pages['page'+pageName].pageClasses}>
                 <h1>{pages['page'+pageName].heading}</h1>
                 <Items type={pageName} />
               </div>
           </div>
-
           );
         }
       });

@@ -24,6 +24,8 @@ let ProductStore = Reflux.createStore({
           this.data.products[productType] = JSON.parse(res.text)[0].products;
           this.trigger(this.data);
         });
+    } else {
+      this.trigger(this.data);
     }
   },
 

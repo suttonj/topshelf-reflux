@@ -34,10 +34,10 @@ let Items = React.createClass({
     this.listenTo(categoryStore, this.refreshPage);
     actions.loadPage(this.props.type, true);
     actions.loadBookList("SteveJobs", true);
+    actions.loadCategoryData("dummy", true);
   },
 
   render: function() {
-    debugger;
     if (this.props.type == 'books') {
       var items = this.state.books.map((item,i) => {
         item.type = 'book'
@@ -45,18 +45,17 @@ let Items = React.createClass({
       });
     }
     else if (this.props.type == 'categories') {
-      var items = this.state.items['categories'].map((item,i) => {
+      var items = this.state.categories.map((item,i) => {
         item.type = 'category'
         return <Item key={item.id} item={item} index={i} />;
       });
     }
-    else {
-      var items = this.state.items[this.props.type].map((item,i) => {
-        item.type = this.state.itemType;
-        return <Item key={item.id} item={item} index={i} />;
-      });
-    }
-    debugger;
+    // else {
+    //   var items = this.state.items[this.props.type].map((item,i) => {
+    //     item.type = this.state.itemType;
+    //     return <Item key={item.id} item={item} index={i} />;
+    //   });
+    // }
       return (
         <div>
           <ul component="ul" className="pure-g appItems list-reset">

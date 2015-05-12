@@ -1,0 +1,28 @@
+[{
+  "categories": [
+        {
+          "id": "0",
+          "category": "Technology",
+          "names": [ "SteveJobs" ],
+          "image": "images/food/item8.jpeg"
+        },
+        {
+          "id": "1",
+          "category": "Business",
+          "names": [ "SteveJobs" ],
+          "image": "images/food/item8.jpeg"
+        },
+        {
+          "id": "2",
+          "category": "Philosophy",
+          "names": [ "SteveJobs" ],
+          "image": "images/food/item8.jpeg"
+        },
+        {
+          "id": "3",
+          "category": "World Leaders",
+          "names": [ "SteveJobs" ],
+          "image": "images/food/item8.jpeg"
+        }
+    ]
+}]

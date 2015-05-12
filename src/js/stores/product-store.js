@@ -8,7 +8,7 @@ let ProductStore = Reflux.createStore({
 
   init() {
     this.data = {
-      products: {
+      items: {
         food: [],
         fashion: []
       }
@@ -18,11 +18,14 @@ let ProductStore = Reflux.createStore({
   },
 
   loadPage(productType,cached) {
-    if(cached !== true || this.data.products[productType].length === 0) {
+    if (!this.data.items[productType])
+      return;
+      
+    if(cached !== true || this.data.items[productType].length === 0) {
       request.get('data/' + productType +'.json')
         .end((err, res) => {
-          this.data.products[productType] = JSON.parse(res.text)[0].products;
-          this.trigger(this.data);
+            this.data.items[productType] = JSON.parse(res.text)[0].items;
+            this.trigger(this.data);
         });
     } else {
       this.trigger(this.data);

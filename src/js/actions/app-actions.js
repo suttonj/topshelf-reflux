@@ -12,6 +12,7 @@ let AppActions = Reflux.createActions(
   'pageChange',
   
   'loadCategoryData',
+  'loadPeopleData',
   'loadBookList'
   ]
 );

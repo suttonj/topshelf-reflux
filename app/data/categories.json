@@ -1,28 +1,52 @@
 [{
-  "categories": [
-        {
-          "id": "0",
-          "category": "Technology",
-          "names": [ "SteveJobs" ],
-          "image": "images/food/item8.jpeg"
-        },
-        {
-          "id": "1",
-          "category": "Business",
-          "names": [ "SteveJobs" ],
-          "image": "images/food/item8.jpeg"
-        },
-        {
-          "id": "2",
-          "category": "Philosophy",
-          "names": [ "SteveJobs" ],
-          "image": "images/food/item8.jpeg"
-        },
-        {
-          "id": "3",
-          "category": "World Leaders",
-          "names": [ "SteveJobs" ],
-          "image": "images/food/item8.jpeg"
-        }
-    ]
+  "items": [
+    {
+      "name": "technology",
+      "id": "0",
+      "category": "Technology",
+      "names": [ "Steve Jobs" ],
+      "image": "images/food/item8.jpeg",
+      "people": {
+          "SteveJobs": {
+            "image": "images/food/item5.jpeg"
+          }
+      }
+    },
+    {
+      "name": "business",
+      "id": "1",
+      "category": "Business",
+      "names": [ "Steve Jobs" ],
+      "image": "images/food/item9.jpeg",
+      "people": {
+          "SteveJobs": {
+            "image": "images/food/item5.jpeg"
+          }
+      }
+    },
+    {
+      "name": "philosophy",
+      "id": "2",
+      "category": "Philosophy",
+      "names": [ "Steve Jobs" ],
+      "image": "images/food/item4.jpeg",
+      "people": {
+          "SteveJobs": {
+            "image": "images/food/item5.jpeg"
+          }
+      }
+    },
+    {
+      "name": "leaders",
+      "id": "3",
+      "category": "World Leaders",
+      "names": [ "Steve Jobs" ],
+      "image": "images/food/item3.jpeg",
+      "people": {
+          "SteveJobs": {
+            "image": "images/food/item5.jpeg"
+          }
+      }
+    }
+  ]
 }]

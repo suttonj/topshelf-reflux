@@ -40,7 +40,7 @@ let Page = React.createClass({
           <div className='container'>
               <div className={pages[pageName].pageClasses}>
                 <h1>{pages[pageName].heading}</h1>
-                <Items type={pageName} name="SteveJobs" />
+                <Items type={pageName} />
               </div>
           </div>
           );

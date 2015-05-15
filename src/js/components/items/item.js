@@ -12,6 +12,9 @@ let actions = require('../../actions/app-actions');
 let AddToBasket = require('../basket/add-to-basket.js');
 let RemoveFromBasket = require('../basket/remove-from-basket.js');
 
+let Router = require('react-router');
+let { Route, DefaultRoute, RouteHandler, Link } = Router;
+
 let Item = React.createClass({
   mixins: [Reflux.connect(basketStore),Reflux.ListenerMixin],
 
@@ -23,8 +26,8 @@ let Item = React.createClass({
     return basketStore.getBasketQty(this.props.item);
   },
 
-  onStatusChange: function(productType) {
-    if (typeof productType === "string") {
+  onStatusChange: function(itemType) {
+    if (typeof itemType === "string") {
       //console.log('current productType', productType);
     }
     this.setState({inBasket : this.isInBasket()});
@@ -62,10 +65,26 @@ let Item = React.createClass({
       );
     }
     else if (type == 'category') {
+      let clickHandler = () => {
+        actions.loadPeopleData(item.category.toLowerCase(), true);
+      };
       return (
-        <div className={"appItem appItem--"+ statusClassName}>
+        <Link to='people' >
+        <div onClick={clickHandler} className={"appItem appItem--"+ statusClassName}>
           <h4 className="appItem-title truncate">{item.category}</h4>
           <div className="appItem-author">{item.names}</div>
+          <img className={'img-responsive appItem-img'} src={item.image} alt="" />
+        </div>
+        </Link>
+      );
+    }
+    else if (type == 'people') {
+      let clickHandler = () => {
+        actions.loadBookList(item.name, true);
+      };
+      return (
+        <div onClick={clickHandler} className={"appItem appItem--"+ statusClassName}>
+          <h4 className="appItem-title truncate">{item.name}</h4>
           <img className={'img-responsive appItem-img'} src={item.image} alt="" />
         </div>
       );

@@ -13,6 +13,7 @@ let Food = require('./components/page/page');
 let Fashion = require('./components/page/page');
 let Books = require('./components/page/page');
 let Categories = require('./components/page/page');
+let People = require('./components/page/page');
 
 let App = React.createClass({
   mixins: [ Router.State ],
@@ -29,6 +30,7 @@ let App = React.createClass({
               <li className='appNav-listItem'><Link className='appBtn' to='fashion' >Fashion</Link></li>
               <li className='appNav-listItem'><Link className='appBtn' to='books' >Books</Link></li>
               <li className='appNav-listItem'><Link className='appBtn' to='categories' >Categories</Link></li>
+              <li className='appNav-listItem'><Link className='appBtn' to='people' >People</Link></li>
             </ul>
         </nav>
       </Header>
@@ -53,6 +55,7 @@ let routes = (
   <Route handler={App}>
     <DefaultRoute handler={RedirectTo}/>
       <Route name="categories" handler={Categories} addHandlerKey={true} />
+      <Route name="people" handler={People} addHandlerKey={true} />
       <Route name="books" handler={Books} addHandlerKey={true} />
       <Route name="food" handler={Food} addHandlerKey={true} />
       <Route name="fashion" handler={Fashion} addHandlerKey={true} />

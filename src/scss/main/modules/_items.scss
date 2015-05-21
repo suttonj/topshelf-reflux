@@ -1,10 +1,17 @@
+$font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$primary-color: #B6B8B7;
+$text-color: #fff;
+$secondary-color: #82817F;
+$dark-color: #4F4E4D;
+
 .appItems {
   overflow: hidden;
   text-align: center;
 }
 
 .appItem {
-  background: #71C9B7;
+  background: $primary-color;
+  font: $font-stack;
   margin-right: 20px;
   margin-bottom: 20px;
   padding: 2px 10px 15px;
@@ -29,10 +36,9 @@
   width: 100%;
   text-transform: uppercase;
   color: #FFF;
-  background-color: #333;
+  background-color: $secondary-color;
   background-color: rgba(33, 33, 33, 0.2);
   letter-spacing: 1px;
-  font-family: 'Futura', monospace;
   padding: 10px 15px;
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
@@ -40,18 +46,39 @@
 .appItem-author {
   width: 100%;
   text-transform: uppercase;
-  color: #FFF;
-  background-color: #333;
-  background-color: rgba(33, 33, 33, 0.2);
+  color: $text-color;
+  background-color: $secondary-color;
+  // background-color: rgba(33, 33, 33, 0.2);
   letter-spacing: 1px;
-  font-family: 'Futura', monospace;
   padding: 6px 10px;
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
 .appItem-img {
   box-shadow: 0 0 1px #008860;
+  height: 180px;
 }
+.appItem-examples {
+  width: 100%;
+  text-transform: uppercase;
+  color: $text-color;
+  text-align: left;
+  // background-color: rgba(33, 33, 33, 0.2);
+  letter-spacing: 1px;
+  padding: 6px 10px;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+.appItem-examples-label {
+  width: 50%;
+  display:block;
+  color: $text-color;
+  letter-spacing: 1px;
+  padding: 2px 6px;
+  -webkit-font-smoothing: antialiased;
+}
+
 .appItem-price {
   background-color: #FFF;
   padding: 5px 10px;

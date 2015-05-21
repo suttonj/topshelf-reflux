@@ -14,6 +14,7 @@ let Fashion = require('./components/page/page');
 let Books = require('./components/page/page');
 let Categories = require('./components/page/page');
 let People = require('./components/page/page');
+let Home = require('./components/page/page');
 
 let App = React.createClass({
   mixins: [ Router.State ],
@@ -26,11 +27,9 @@ let App = React.createClass({
       <Header>
         <nav className='appNav'>
             <ul className='appNav-list'>
-              <li className='appNav-listItem'><Link className='appBtn' to='food' >Food</Link></li>
-              <li className='appNav-listItem'><Link className='appBtn' to='fashion' >Fashion</Link></li>
-              <li className='appNav-listItem'><Link className='appBtn' to='books' >Books</Link></li>
-              <li className='appNav-listItem'><Link className='appBtn' to='categories' >Categories</Link></li>
-              <li className='appNav-listItem'><Link className='appBtn' to='people' >People</Link></li>
+              <li className='appNav-listItem'><Link className='appBtn' to='books'>Books</Link></li>
+              <li className='appNav-listItem'><Link className='appBtn' to='people'>People</Link></li>
+              <li className='appNav-listItem'><Link className='appBtn' to='home'>Categories</Link></li>
             </ul>
         </nav>
       </Header>
@@ -45,20 +44,18 @@ let App = React.createClass({
 let RedirectTo = React.createClass({
   statics: {
     willTransitionTo (transition) {
-      transition.redirect('/categories');
+      transition.redirect('/');
     }
   },
   render () {}
 });
 
 let routes = (
-  <Route handler={App}>
-    <DefaultRoute handler={RedirectTo}/>
+  <Route handler={App} path="/">
+    <DefaultRoute name="home" handler={Home} />
       <Route name="categories" handler={Categories} addHandlerKey={true} />
       <Route name="people" handler={People} addHandlerKey={true} />
       <Route name="books" handler={Books} addHandlerKey={true} />
-      <Route name="food" handler={Food} addHandlerKey={true} />
-      <Route name="fashion" handler={Fashion} addHandlerKey={true} />
   </Route>
 );
 

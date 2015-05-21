@@ -1,5 +1,5 @@
 {
-  "name": "react-reflux-super-fantastic-shop-demo",
+  "name": "topshelf",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -8,7 +8,7 @@
     "start": "gulp",
     "build": "gulp build"
   },
-  "author": "Marinda - hello@marinda.me",
+  "author": "Jeremy Sutton",
   "license": "MIT",
   "devDependencies": {
     "babelify": "^5.0.4",

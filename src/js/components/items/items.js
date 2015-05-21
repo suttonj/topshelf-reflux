@@ -15,6 +15,7 @@ let Items = React.createClass({
   mixins: [Reflux.connect(store), Reflux.ListenerMixin],
 
   refreshPage() {
+    debugger;
     this.setState({
       itemType: this.props.type
     });
@@ -29,7 +30,7 @@ let Items = React.createClass({
   },
 
   componentDidMount: function() {
-    //this.listenTo(store, this.refreshPage);
+    this.listenTo(store, this.refreshPage);
     //this.listenTo(bookStore, this.refreshPage);
     //this.listenTo(categoryStore, this.refreshPage);
     actions.loadPage(this.props.type, true);

@@ -1,7 +1,7 @@
 
 'use strict';
 
-require('./item.css');
+//require('./item.css');
 
 let React = require('react');
 let Reflux = require('reflux');
@@ -52,9 +52,9 @@ let Item = React.createClass({
   
   getItemComponent(type, item) {
     var statusClassName = this.state.inBasket ? 'is-inBasket ' : '';
-    if (type == 'book') {
+    if (type == 'books') {
       return (
-        <div className={"appItem appItem--"+ statusClassName}>
+        <div className={"appItem appItem--"+ type}>
           <h4 className="appItem-title truncate">{item.title}</h4>
           <div className="appItem-author">by {item.author}</div>
           <img className={'img-responsive appItem-img'} src={item.image} alt="" />
@@ -64,26 +64,27 @@ let Item = React.createClass({
         </div>
       );
     }
-    else if (type == 'category') {
+    else if (type == 'categories') {
       let clickHandler = () => {
-        actions.loadPeopleData(item.category.toLowerCase(), true);
+        actions.loadPage(type, true, item.category.toLowerCase());
       };
       return (
         <Link to='people' >
-        <div onClick={clickHandler} className={"appItem appItem--"+ statusClassName}>
+        <div onClick={clickHandler} className={"appItem appItem--"+ type}>
           <h4 className="appItem-title truncate">{item.category}</h4>
-          <div className="appItem-author">{item.names}</div>
           <img className={'img-responsive appItem-img'} src={item.image} alt="" />
+          <span className="appItem-examples-label">Notables:</span>
+          <div className="appItem-examples">{item.names}</div>
         </div>
         </Link>
       );
     }
     else if (type == 'people') {
       let clickHandler = () => {
-        actions.loadBookList(item.name, true);
+        actions.loadPage(type, true, item.name);
       };
       return (
-        <div onClick={clickHandler} className={"appItem appItem--"+ statusClassName}>
+        <div onClick={clickHandler} className={"appItem appItem--"+ type}>
           <h4 className="appItem-title truncate">{item.name}</h4>
           <img className={'img-responsive appItem-img'} src={item.image} alt="" />
         </div>
@@ -110,7 +111,7 @@ let Item = React.createClass({
 
   render: function() {
     return (
-      <li className='pure-u-1 pure-u-md-1-3 pure-u-lg-1-4' >
+      <li className='pure-u-1 pure-u-md-1-3 pure-u-lg-1-3' >
         {this.getItemComponent(this.props.item.type, this.props.item)}
       </li>
     );

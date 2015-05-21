@@ -21,7 +21,7 @@ let ItemStore = Reflux.createStore({
   loadPage(itemType,cached) {
     if (!this.data.items[itemType])
       return;
-      
+    
     if(cached !== true || this.data.items[itemType].length === 0) {
       request.get('data/' + itemType +'.json')
         .end((err, res) => {

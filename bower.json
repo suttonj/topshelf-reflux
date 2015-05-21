@@ -1,8 +1,8 @@
 {
-  "name": "react-reflux-super-fantastic-shop-demo",
+  "name": "topshelf",
   "version": "0.0.0",
   "authors": [
-    "Marinda - hello@marinda.me"
+    "Jeremy Sutton"
   ],
   "license": "MIT",
   "ignore": [

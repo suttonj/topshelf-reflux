@@ -10,13 +10,9 @@ require('./page.css');
 
 // page data
 let pages = {
-  food : {
-    pageClasses : 'page page--food',
-    heading : 'Food'
-  },
-  fashion : {
-    pageClasses : 'page page--fashion',
-    heading : 'Fashion'
+  home : {
+    pageClasses : 'page page--home',
+    heading : 'Browse Reading Lists by Category'
   },
   categories : {
     pageClasses: 'page page--categories',
@@ -35,12 +31,17 @@ let pages = {
 let Page = React.createClass({
       render: function() {
         let pageName = this.props.params.pathname.slice(1);
+        let itemType = pageName;
+        if (pageName == null || pageName == "")
+          pageName = "home";
+        if (pageName == "home")
+          itemType = "categories";
         console.log(pageName);
         return (
           <div className='container'>
               <div className={pages[pageName].pageClasses}>
                 <h1>{pages[pageName].heading}</h1>
-                <Items type={pageName} />
+                <Items type={itemType} />
               </div>
           </div>
           );
